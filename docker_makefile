@@ -1,0 +1,7 @@
+test:
+	. ./venv/bin/activate
+	nosetests
+
+deploy:
+	. ./venv/bin/activate
+	FLASK_APP=./app/main.py flask run --port=8080 --host=0.0.0.0
