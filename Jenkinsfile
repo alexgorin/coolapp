@@ -6,7 +6,7 @@ pipeline {
                 sh 'make build'
             }
         }
-        deploy('test') {
+        stage('test') {
             steps {
                 sh 'make test'
             }
