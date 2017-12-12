@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                make build
+                sh 'make build'
             }
         }
         deploy('test') {
             steps {
-                make test
+                sh 'make test'
             }
         }
         stage('deploy') {
             steps {
-                make deploy
+                sh 'make deploy'
             }
         }
     }
